@@ -1,4 +1,4 @@
-using EmplyeMgm.Data;
+using EmplyeMgm.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
