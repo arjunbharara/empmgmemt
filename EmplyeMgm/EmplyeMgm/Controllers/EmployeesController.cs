@@ -56,12 +56,12 @@ namespace EmplyeMgm.Controllers
         // POST: Employees/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
         {
             if (ModelState.IsValid)
             {
                 await _employeeService.CreateEmployeeAsync(employee);
-                var user = new ApplicationUser { FirstName = employee.FirstName, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial };
+                var user = new ApplicationUser { FirstName = employee.FirstName, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial,IsAdmin=employee.IsAdmin };
                 var result = await _userManager.CreateAsync(user, "DefaultPassword123!");
                 if (result.Succeeded)
                 {
