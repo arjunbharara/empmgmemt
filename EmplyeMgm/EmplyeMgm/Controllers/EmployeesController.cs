@@ -12,15 +12,11 @@ namespace EmplyeMgm.Controllers
     public class EmployeesController : Controller
     {
         private readonly IEmployeeService _employeeService;
-
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
-
-        public EmployeesController(IEmployeeService employeeService, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+       
+        
+        public EmployeesController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
-            _userManager = userManager;
-            _signInManager = signInManager;
         }
 
         // GET: Employees
@@ -47,6 +43,7 @@ namespace EmplyeMgm.Controllers
             return View(employee);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Employees/Create
         public IActionResult Create()
         {
@@ -54,6 +51,7 @@ namespace EmplyeMgm.Controllers
         }
 
         // POST: Employees/Create
+        [Authorize(Roles ="Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
@@ -61,17 +59,11 @@ namespace EmplyeMgm.Controllers
             if (ModelState.IsValid)
             {
                 await _employeeService.CreateEmployeeAsync(employee);
-                var user = new ApplicationUser { FirstName = employee.FirstName, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial,IsAdmin=employee.IsAdmin };
-                var result = await _userManager.CreateAsync(user, "DefaultPassword123!");
-                if (result.Succeeded)
-                {
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction(nameof(Index));
-                }
-               
+                return RedirectToAction(nameof(Index));
             }
             return View(employee);
         }
+
 
         // GET: Employees/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -104,6 +96,7 @@ namespace EmplyeMgm.Controllers
                 try
                 {
                     await _employeeService.UpdateEmployeeAsync(employee);
+                   
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -116,9 +109,8 @@ namespace EmplyeMgm.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return RedirectToAction("Index");
         }
 
         // GET: Employees/Delete/5
