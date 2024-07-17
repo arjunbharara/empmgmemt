@@ -1,5 +1,6 @@
 ﻿
 using EmplyeMgm.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,11 @@ namespace EmplyeMgm.Services
     public class EmployeeService : IEmployeeService
     {
         private readonly ApplicationDbContext _context;
-
-        public EmployeeService(ApplicationDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public EmployeeService(ApplicationDbContext context,UserManager<ApplicationUser>userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
@@ -35,6 +37,7 @@ namespace EmplyeMgm.Services
         public async Task UpdateEmployeeAsync(Employee employee)
         {
             _context.Update(employee);
+           
             await _context.SaveChangesAsync();
         }
 

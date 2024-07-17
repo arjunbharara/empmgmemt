@@ -1,62 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\",
+  "WorkspaceRootPath": "D:\\empmgmemt\\EmplyeMgm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\emplyemgm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\emplyemgm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|c:\\users\\91745\\source\\repos\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\emplyemgm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\emplyemgm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,86 +74,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T21:48:13.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T21:48:06.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T21:48:02.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T21:47:56.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-16T21:47:34.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Controllers\\EmployeesController.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "EmplyeMgm\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T21:46:29.621Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
@@ -153,25 +83,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T05:58:31.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAUwIgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T05:57:46.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T21:47:34.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Controllers\\EmployeesController.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "EmplyeMgm\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:46:29.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Program.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
               "RelativeToolTip": "EmplyeMgm\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T21:33:13.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Service\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
               "RelativeToolTip": "EmplyeMgm\\Service\\IEmployeeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T21:46:14.346Z",
               "EditorCaption": ""
@@ -180,76 +161,127 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Service\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
               "RelativeToolTip": "EmplyeMgm\\Service\\EmployeeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T21:45:28.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "EmplyeMgm\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T21:31:24.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmplyeMgm.csproj",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
-              "RelativeDocumentMoniker": "EmplyeMgm\\EmplyeMgm.csproj",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
-              "RelativeToolTip": "EmplyeMgm\\EmplyeMgm.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-16T21:30:07.331Z",
+              "DocumentIndex": 2,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "EmplyeMgm\\Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T21:30:44.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\appsettings.json",
-              "RelativeDocumentMoniker": "EmplyeMgm\\appsettings.json",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\appsettings.json",
-              "RelativeToolTip": "EmplyeMgm\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-16T21:32:37.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Models\\Employee.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
               "RelativeToolTip": "EmplyeMgm\\Models\\Employee.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T21:30:57.077Z"
+              "WhenOpened": "2024-07-16T21:30:57.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T21:48:13.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\appsettings.json",
+              "RelativeDocumentMoniker": "EmplyeMgm\\appsettings.json",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\appsettings.json",
+              "RelativeToolTip": "EmplyeMgm\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-16T21:32:37.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T21:47:56.614Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\91745\\source\\repos\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "EmplyeMgm\\Models\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T21:30:44.744Z"
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T21:48:02.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T21:48:06.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmplyeMgm.csproj",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
+              "RelativeDocumentMoniker": "EmplyeMgm\\EmplyeMgm.csproj",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
+              "RelativeToolTip": "EmplyeMgm\\EmplyeMgm.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-16T21:30:07.331Z"
             }
           ]
         }
