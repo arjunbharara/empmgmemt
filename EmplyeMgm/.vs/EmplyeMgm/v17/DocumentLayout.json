@@ -3,56 +3,68 @@
   "WorkspaceRootPath": "D:\\empmgmemt\\EmplyeMgm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\service\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|solutionrelative:emplyemgm\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C9DCF9E-E2FE-47EE-98FE-61C2AA28661A}|EmplyeMgm\\EmplyeMgm.csproj|d:\\empmgmemt\\emplyemgm\\emplyemgm\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +90,110 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "EmplyeMgm\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T06:23:05.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-18T06:08:48.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T09:07:27.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Models\\Employee.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
+              "RelativeToolTip": "EmplyeMgm\\Models\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T09:00:11.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Program.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
+              "RelativeToolTip": "EmplyeMgm\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T07:40:30.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwIcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T07:39:17.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T07:38:09.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T07:37:43.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Controllers\\HomeController.cs",
@@ -91,26 +206,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Service\\EmployeeService.cs",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
-              "RelativeToolTip": "EmplyeMgm\\Service\\EmployeeService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T11:58:39.093Z",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Details.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T12:25:41.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-17T10:32:56.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Controllers\\EmployeesController.cs",
               "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Controllers\\EmployeesController.cs",
               "RelativeToolTip": "EmplyeMgm\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGIAAAATAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T09:08:08.74Z",
               "EditorCaption": ""
@@ -118,120 +246,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Create.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T09:07:27.907Z",
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Service\\EmployeeService.cs",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\EmployeeService.cs",
+              "RelativeToolTip": "EmplyeMgm\\Service\\EmployeeService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T11:58:39.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Models\\Employee.cs",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\Employee.cs",
-              "RelativeToolTip": "EmplyeMgm\\Models\\Employee.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T09:00:11.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Program.cs",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Program.cs",
-              "RelativeToolTip": "EmplyeMgm\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:40:30.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAMwCkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:39:17.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:38:09.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:37:43.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "IEmployeeService.cs",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Service\\IEmployeeService.cs",
               "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Service\\IEmployeeService.cs",
               "RelativeToolTip": "EmplyeMgm\\Service\\IEmployeeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T21:46:14.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Edit.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAwAAAAgAAAA",
+              "DocumentIndex": 13,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T10:32:56.39Z",
+              "WhenOpened": "2024-07-18T04:55:00.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "RelativeDocumentMoniker": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "ToolTip": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "RelativeToolTip": "EmplyeMgm\\Views\\Employees\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAADUAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-17T07:34:21.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -239,12 +292,11 @@
               "RelativeToolTip": "EmplyeMgm\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T09:22:56.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T09:22:56.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "EmplyeMgm\\Models\\ApplicationUser.cs",
@@ -252,12 +304,11 @@
               "RelativeToolTip": "EmplyeMgm\\Models\\ApplicationUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T21:30:44.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T21:30:44.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EmplyeMgm.csproj",
               "DocumentMoniker": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
               "RelativeDocumentMoniker": "EmplyeMgm\\EmplyeMgm.csproj",

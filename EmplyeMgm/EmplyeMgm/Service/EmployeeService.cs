@@ -31,12 +31,12 @@ namespace EmplyeMgm.Services
             return await _context.Employees.FindAsync(id);
         }
 
-        public async Task CreateEmployeeAsync(Employee employee)
+        public async Task CreateEmployeeAsync(Employee employee, string pass)
         {
             _context.Add(employee);
             await _context.SaveChangesAsync();
             var user = new ApplicationUser { FirstName = employee.FirstName, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial, IsAdmin = employee.IsAdmin };
-            var result = await _userManager.CreateAsync(user, "Accops@123");
+            var result = await _userManager.CreateAsync(user, pass);
 
             if (result.Succeeded)
             {
@@ -78,10 +78,17 @@ namespace EmplyeMgm.Services
         public async Task DeleteEmployeeAsync(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
+            var user = await _userManager.FindByEmailAsync(employee.Emial);
             if (employee != null)
             {
+               
                 _context.Employees.Remove(employee);
                 await _context.SaveChangesAsync();
+                if(user != null)
+                {
+                    await _userManager.DeleteAsync(user);
+                }
+
             }
         }
 

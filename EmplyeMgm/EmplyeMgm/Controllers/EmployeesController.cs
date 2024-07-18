@@ -56,9 +56,10 @@ namespace EmplyeMgm.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
         {
+            string? pass= Request.Form["Password"];
             if (ModelState.IsValid)
             {
-                await _employeeService.CreateEmployeeAsync(employee);
+                await _employeeService.CreateEmployeeAsync(employee,pass);
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);

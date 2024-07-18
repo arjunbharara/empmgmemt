@@ -169,6 +169,7 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
                     _context.Add(employee);
                     await _context.SaveChangesAsync();
 
+                    return Redirect("~/Identity/Account/Login");
                 }
                 foreach (var error in result.Errors)
                 {
