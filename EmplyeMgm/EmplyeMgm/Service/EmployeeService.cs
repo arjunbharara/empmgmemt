@@ -35,7 +35,7 @@ namespace EmplyeMgm.Services
         {
             _context.Add(employee);
             await _context.SaveChangesAsync();
-            var user = new ApplicationUser { FirstName = employee.FirstName, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial, IsAdmin = employee.IsAdmin };
+            var user = new ApplicationUser { FirstName = employee.FirstName,City=employee.City,DOB=employee.DOB, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial, IsAdmin = employee.IsAdmin };
             var result = await _userManager.CreateAsync(user, pass);
 
             if (result.Succeeded)

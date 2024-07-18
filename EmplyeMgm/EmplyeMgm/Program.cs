@@ -28,13 +28,12 @@ using (var scope = app.Services.CreateScope())
 
     try
     {
-        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-        await SeedRolesAsync(roleManager);
+        await ApplicationDbContext.SeedRolesAndSuperAdmin(services);
     }
     catch (Exception ex)
     {
         // Log any errors
-        Console.Error.WriteLine($"Error seeding roles: {ex.Message}");
+        Console.Error.WriteLine($"Error seeding roles and SuperAdmin user: {ex.Message}");
     }
 }
 
@@ -60,16 +59,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
-static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
-{
-    string[] roleNames = { "Admin", "Employee" };
-
-    foreach (var roleName in roleNames)
-    {
-        if (!await roleManager.RoleExistsAsync(roleName))
-        {
-            await roleManager.CreateAsync(new IdentityRole(roleName));
-        }
-    }
-}

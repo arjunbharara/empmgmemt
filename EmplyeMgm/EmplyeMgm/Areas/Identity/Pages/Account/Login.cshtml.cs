@@ -21,12 +21,14 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger,UserManager<ApplicationUser>userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -116,6 +118,16 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    // get the user-logged in
+                    var user=await _userManager.FindByEmailAsync(Input.Email);
+                    if(await _userManager.IsInRoleAsync(user,"Admin"))
+                    {
+                        return LocalRedirect(Url.Content("~/Admin/Index"));
+                    }else if(await _userManager.IsInRoleAsync(user,"Employee"))
+                    {
+                        return LocalRedirect(Url.Content("~/Employees/Index"));
+                    }
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

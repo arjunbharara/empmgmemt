@@ -95,6 +95,14 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            [DataType(DataType.Text)]
+            [Display(Name = "City")]
+            public string City { get; set; }
+
+            [DataType(DataType.Date)]
+            [Display(Name = "Date Of Birth")]
+            public DateOnly DOB { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -110,12 +118,14 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+           
+
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            
+
 
             [Display(Name = "IsAdmin")]
             public bool IsAdmin { get; set; }
@@ -140,31 +150,23 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
+                user.City= Input.City;
+                user.DOB = Input.DOB;
                 user.IsAdmin = Input.IsAdmin;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
-                    if (Input.IsAdmin)
-                    {
-                        await _userManager.AddToRoleAsync(user, "Admin");
-                    }
-                    else
-                    {
-                        await _userManager.AddToRoleAsync(user, "Employee");
-                    }
-
-                    DateOnly dateOnly = new DateOnly(2024, 7, 17);
+                    await _userManager.AddToRoleAsync(user, "Employee");
                     var employee = new Employee
                     {
                         FirstName = Input.FirstName,
                         LastName = Input.LastName,
                         IsAdmin = Input.IsAdmin,
                         Emial = Input.Email,
-                        City = "pune",
-                        DOB = dateOnly
+                        City = Input.City,
+                        DOB = Input.DOB,
                     };
                     _context.Add(employee);
                     await _context.SaveChangesAsync();
