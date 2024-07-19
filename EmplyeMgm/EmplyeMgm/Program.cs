@@ -2,6 +2,7 @@ using EmplyeMgm.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using EmplyeMgm.Services;
+using EmplyeMgm.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddScoped<IEmployeeService,EmployeeService>();
-
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<ISuperAdminService, SuperAdminService>();
 var app = builder.Build();
 
 // Seed roles
@@ -36,6 +38,7 @@ using (var scope = app.Services.CreateScope())
         Console.Error.WriteLine($"Error seeding roles and SuperAdmin user: {ex.Message}");
     }
 }
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

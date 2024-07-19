@@ -23,8 +23,9 @@ namespace EmplyeMgm.Controllers
         [Authorize(Roles = "Admin,SuperAdmin,Employee")]
         public async Task<IActionResult> Index()
         {
-            var employees = await _employeeService.GetEmployeesAsync();
-            return View(employees);
+            var user=HttpContext.User;
+            var employees = await _employeeService.GetEmployeesAsync(user);
+             return View(employees);
         }
 
         [Authorize(Roles = "Admin,SuperAdmin,Employee")]
@@ -42,28 +43,6 @@ namespace EmplyeMgm.Controllers
                 return NotFound();
             }
 
-            return View(employee);
-        }
-
-        [Authorize(Roles = "Admin,SuperAdmin,Employee")]
-        // GET: Employees/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Employees/Create
-        [Authorize(Roles = "Admin,SuperAdmin,Employee")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
-        {
-            string? pass= Request.Form["Password"];
-            if (ModelState.IsValid)
-            {
-                await _employeeService.CreateEmployeeAsync(employee,pass);
-                return RedirectToAction(nameof(Index));
-            }
             return View(employee);
         }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EmplyeMgm.Models.Employee>
+﻿@model EmplyeMgm.Models.Employee
 
 @{
     ViewData["Title"] = "Index";
@@ -6,9 +6,7 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -32,38 +30,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@* @foreach (var item in Model) { *@
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => Model.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => Model.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Emial)
+                @Html.DisplayFor(modelItem => Model.Emial)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DOB)
+                @Html.DisplayFor(modelItem => Model.DOB)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.City)
+                @Html.DisplayFor(modelItem => Model.City)
             </td>
-                <td>@Html.DisplayFor(modelItem => item.IsAdmin)</td>
-                <td>
-                    @if (User.IsInRole("Admin") || (User.IsInRole("Employee") && User.Identity.Name == item.Emial))
-                    {
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-
-                        }
-                    }
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <td>@Html.DisplayFor(modelItem => Model.IsAdmin)</td>
+             <td>
+                <a asp-asp-controller="Employees" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+              
                 </td>
         </tr>
-}
+@* } *@
     </tbody>
 </table>

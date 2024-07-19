@@ -1,30 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using EmplyeMgm.Models;
+using EmplyeMgm.Services;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using EmplyeMgm.Service;
+using EmplyeMgm.ViewModel;
 
 namespace EmplyeMgm.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IAdminService _adminService;
 
-        public AdminController(ApplicationDbContext context)
+
+        public AdminController(IAdminService adminService)
         {
-            _context = context;
+            _adminService=adminService;
         }
 
-        // GET: Admin
+        // GET: Employees
+        
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Employees.ToListAsync());
+            var employees = await _adminService.GetEmployeesAsync();
+            return View(employees);
         }
 
-        // GET: Admin/Details/5
+        
+        // GET: Employees/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,8 +38,7 @@ namespace EmplyeMgm.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -42,29 +47,39 @@ namespace EmplyeMgm.Controllers
             return View(employee);
         }
 
-        // GET: Admin/Create
+       
+        // GET: Employees/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Employees/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
+        public async Task<IActionResult> Create(EmployeeViewModel employee)
         {
+           
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
+                var emp = new Employee
+                {
+                    FirstName = employee.FirstName,
+                    LastName = employee.LastName,
+                    Emial = employee.Emial,
+                    DOB = employee.DOB,
+                    City = employee.City,
+                    IsAdmin = employee.IsAdmin
+                };
+                await _adminService.CreateEmployeeAsync(emp, employee.Password);
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);
         }
 
-        // GET: Admin/Edit/5
+
+        // GET: Employees/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,7 +87,7 @@ namespace EmplyeMgm.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees.FindAsync(id);
+            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -80,9 +95,7 @@ namespace EmplyeMgm.Controllers
             return View(employee);
         }
 
-        // POST: Admin/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Employees/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
@@ -96,12 +109,12 @@ namespace EmplyeMgm.Controllers
             {
                 try
                 {
-                    _context.Update(employee);
-                    await _context.SaveChangesAsync();
+                    await _adminService.UpdateEmployeeAsync(employee);
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EmployeeExists(employee.Id))
+                    if (!_adminService.EmployeeExists(employee.Id))
                     {
                         return NotFound();
                     }
@@ -110,12 +123,11 @@ namespace EmplyeMgm.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return RedirectToAction("Index");
         }
 
-        // GET: Admin/Delete/5
+        // GET: Employees/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,8 +135,7 @@ namespace EmplyeMgm.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
             if (employee == null)
             {
                 return NotFound();
@@ -133,24 +144,13 @@ namespace EmplyeMgm.Controllers
             return View(employee);
         }
 
-        // POST: Admin/Delete/5
+        // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee != null)
-            {
-                _context.Employees.Remove(employee);
-            }
-
-            await _context.SaveChangesAsync();
+            await _adminService.DeleteEmployeeAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool EmployeeExists(int id)
-        {
-            return _context.Employees.Any(e => e.Id == id);
         }
     }
 }

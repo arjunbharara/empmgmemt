@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace EmplyeMgm.Services
@@ -21,9 +22,40 @@ namespace EmplyeMgm.Services
             _roleManager = roleManager;
         }
 
-        public async Task<IEnumerable<Employee>> GetEmployeesAsync()
+        public async Task<Employee> GetEmployeesAsync(ClaimsPrincipal user)
         {
-            return await _context.Employees.ToListAsync();
+            var listOfEmployees = await _context.Employees.ToListAsync();
+            var emp= await _userManager.GetUserAsync(user);
+            if (emp != null)
+            {
+                foreach(var item in listOfEmployees)
+                {
+                    if (item.Emial == emp.Email)
+                    {
+                        var employee = new Employee
+                        {
+                            City = emp.City,
+                            FirstName = emp.FirstName,
+                            LastName = emp.LastName,
+                            DOB = emp.DOB,
+                            Emial = emp.Email,
+                            IsAdmin = emp.IsAdmin,
+                            Id=item.Id
+                        };
+                        return employee;
+                    }
+                } 
+            }
+
+            return  new Employee
+            {
+                FirstName = "ajay",
+                LastName = "singh",
+                City = "pune",
+                DOB = new DateOnly(2001, 12, 10),
+                IsAdmin = false,
+                Emial = "ajay@gmail.com"
+            }; 
         }
 
         public async Task<Employee> GetEmployeeByIdAsync(int id)
