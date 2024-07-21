@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using EmplyeMgm.Services;
 using EmplyeMgm.Service;
+using EmplyeMgm.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>()
 
 builder.Services.AddScoped<IEmployeeService,EmployeeService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddScoped<ISuperAdminService, SuperAdminService>();
+
 var app = builder.Build();
 
 // Seed roles
@@ -47,7 +48,10 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+//adding middleware for handling the unhandled exceptions.
+app.UseMiddleware<CustsomExceptionMiddleware>();
 
+app.UseStatusCodePagesWithReExecute("/Base/Error", "?statusCode={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

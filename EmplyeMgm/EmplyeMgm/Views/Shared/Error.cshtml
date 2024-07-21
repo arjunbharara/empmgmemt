@@ -11,6 +11,23 @@
     <p>
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
+
+    <p>
+        <strong>Status Code:</strong> <code>@Model.StatusCode</code>
+    </p>
+}
+@if (Model?.ErrorMessage != null)
+{
+    <div>
+        <h3>Error Message: <code>@Model.ErrorMessage</code></h3>
+    </div>
+}
+
+@if (Model?.StatusCode != null)
+{
+    <div>
+        <h3>Status Code: <code>@Model.StatusCode</code></h3>
+    </div>
 }
 
 <h3>Development Mode</h3>

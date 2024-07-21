@@ -24,15 +24,33 @@ namespace EmplyeMgm.Service
 
             public async Task<IEnumerable<Employee>> GetEmployeesAsync()
             {
+            try
+            {
                 return await _context.Employees.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while retrieving employees.", ex);
+            }
             }
 
             public async Task<Employee> GetEmployeeByIdAsync(int id)
             {
+            try
+            {
                 return await _context.Employees.FindAsync(id);
             }
+            catch (Exception ex)
+            {
 
-            public async Task CreateEmployeeAsync(Employee employee, string pass)
+                throw new ApplicationException($"An error occurred while retrieving the employee with ID {id}.", ex);
+            }
+
+            }
+
+        public async Task CreateEmployeeAsync(Employee employee, string pass)
+        {
+            try
             {
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
@@ -41,19 +59,24 @@ namespace EmplyeMgm.Service
 
                 if (result.Succeeded)
                 {
-                    if (employee.IsAdmin)
-                    {
-                        await _userManager.AddToRoleAsync(user, "Admin");
-                    }
-                    else
-                    {
-                        await _userManager.AddToRoleAsync(user, "Employee");
-                    }
+                    var role = employee.IsAdmin ? "Admin" : "Employee";
+                    await _userManager.AddToRoleAsync(user, role);
+                }
+                else
+                {
+                    throw new ApplicationException("Failed to create user account.");
                 }
 
             }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while creating the employee.", ex);
+            }
+        }
 
             public async Task UpdateEmployeeAsync(Employee employee)
+            {
+            try
             {
                 _context.Update(employee);
 
@@ -61,7 +84,7 @@ namespace EmplyeMgm.Service
                 var user = await _userManager.FindByEmailAsync(employee.Emial);
                 if (user == null)
                 {
-                    return;
+                    throw new KeyNotFoundException("User not found.");
                 }
                 else
                 {
@@ -75,27 +98,46 @@ namespace EmplyeMgm.Service
                     await _userManager.UpdateAsync(user);
                 }
             }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while updating the employee.", ex);
+            }
+            }
 
             public async Task DeleteEmployeeAsync(int id)
             {
+            try
+            {
                 var employee = await _context.Employees.FindAsync(id);
-                var user = await _userManager.FindByEmailAsync(employee.Emial);
-                if (employee != null)
+                if (employee == null)
                 {
-
-                    _context.Employees.Remove(employee);
-                    await _context.SaveChangesAsync();
-                    if (user != null)
-                    {
-                        await _userManager.DeleteAsync(user);
-                    }
-
+                    throw new KeyNotFoundException("Employee Not Found");
                 }
+                var user = await _userManager.FindByEmailAsync(employee.Emial);
+                _context.Employees.Remove(employee);
+                await _context.SaveChangesAsync();
+                if (user != null)
+                {
+                    await _userManager.DeleteAsync(user);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occured while deleting the employee.", ex);
+            }
             }
 
             public bool EmployeeExists(int id)
             {
+            try
+            {
                 return _context.Employees.Any(e => e.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occured while checking if the employee exists",ex);   
+            }
             }
     }
 }

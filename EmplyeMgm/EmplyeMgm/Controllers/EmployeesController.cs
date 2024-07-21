@@ -8,24 +8,33 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EmplyeMgm.Controllers
 {
-   
-    public class EmployeesController : Controller
+
+    [Authorize(Roles ="Employee")]
+    public class EmployeesController : HomeController
     {
         private readonly IEmployeeService _employeeService;
        
         
-        public EmployeesController(IEmployeeService employeeService)
+        public EmployeesController(IEmployeeService employeeService, ILogger<HomeController> logger):base(logger)
         {
             _employeeService = employeeService;
+
         }
 
         // GET: Employees
-        [Authorize(Roles = "Admin,SuperAdmin,Employee")]
         public async Task<IActionResult> Index()
         {
-            var user=HttpContext.User;
-            var employees = await _employeeService.GetEmployeesAsync(user);
-             return View(employees);
+            try
+            {
+                var user = HttpContext.User;
+                var employees = await _employeeService.GetEmployeesAsync(user);
+                return View(employees);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while getting employees");
+                return RedirectToAction("Error", new { statusCode = "500" });
+            }
         }
 
         [Authorize(Roles = "Admin,SuperAdmin,Employee")]

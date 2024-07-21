@@ -8,25 +8,35 @@ using Microsoft.AspNetCore.Authorization;
 using EmplyeMgm.Service;
 using EmplyeMgm.ViewModel;
 
+
 namespace EmplyeMgm.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly IAdminService _adminService;
+        private readonly ILogger<AdminController> _logger;
 
-
-        public AdminController(IAdminService adminService)
+        public AdminController(IAdminService adminService,ILogger<AdminController>logger)
         {
             _adminService=adminService;
+            _logger=logger;
         }
 
         // GET: Employees
-        
+        [Authorize(Roles ="Admin,SuperAdmin")]
         public async Task<IActionResult> Index()
         {
-            var employees = await _adminService.GetEmployeesAsync();
-            return View(employees);
+            try
+            {
+                var employees = await _adminService.GetEmployeesAsync();
+                return View(employees);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occured while getting employee");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         
@@ -37,14 +47,22 @@ namespace EmplyeMgm.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
+            try
             {
-                return NotFound();
-            }
 
-            return View(employee);
+                var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+
+                return View(employee);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex,"An error occured while getting employee details.");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
        
@@ -63,17 +81,25 @@ namespace EmplyeMgm.Controllers
            
             if (ModelState.IsValid)
             {
-                var emp = new Employee
+                try
                 {
-                    FirstName = employee.FirstName,
-                    LastName = employee.LastName,
-                    Emial = employee.Emial,
-                    DOB = employee.DOB,
-                    City = employee.City,
-                    IsAdmin = employee.IsAdmin
-                };
-                await _adminService.CreateEmployeeAsync(emp, employee.Password);
-                return RedirectToAction(nameof(Index));
+                    var emp = new Employee
+                    {
+                        FirstName = employee.FirstName,
+                        LastName = employee.LastName,
+                        Emial = employee.Emial,
+                        DOB = employee.DOB,
+                        City = employee.City,
+                        IsAdmin = employee.IsAdmin
+                    };
+                    await _adminService.CreateEmployeeAsync(emp, employee.Password);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "An error occurred while creating an employee.");
+                    return RedirectToAction("Error", "Home");
+                }
             }
             return View(employee);
         }
@@ -86,13 +112,21 @@ namespace EmplyeMgm.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
+            try
             {
-                return NotFound();
+
+                var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while getting employee for edit.");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         // POST: Employees/Edit/5
@@ -112,7 +146,7 @@ namespace EmplyeMgm.Controllers
                     await _adminService.UpdateEmployeeAsync(employee);
 
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateConcurrencyException ex)
                 {
                     if (!_adminService.EmployeeExists(employee.Id))
                     {
@@ -120,11 +154,16 @@ namespace EmplyeMgm.Controllers
                     }
                     else
                     {
-                        throw;
+                        _logger.LogError(ex, "A concurrency error occurred while updating employee.");
+                        return RedirectToAction("Error", "Home");
                     }
                 }
+                catch(Exception ex) {
+                    _logger.LogError(ex, "An error occurred while updating employee.");
+                    return RedirectToAction("Error", "Home");
+                }
             }
-            return RedirectToAction("Index");
+            return View(employee);
         }
 
         // GET: Employees/Delete/5
@@ -134,14 +173,21 @@ namespace EmplyeMgm.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
+            try
             {
-                return NotFound();
-            }
+                var employee = await _adminService.GetEmployeeByIdAsync(id.Value);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
 
-            return View(employee);
+                return View(employee);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while getting employee for delete.");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         // POST: Employees/Delete/5
@@ -149,8 +195,16 @@ namespace EmplyeMgm.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _adminService.DeleteEmployeeAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _adminService.DeleteEmployeeAsync(id);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while deleting employee.");
+                return RedirectToAction("Error", "Home");
+            }
         }
     }
 }

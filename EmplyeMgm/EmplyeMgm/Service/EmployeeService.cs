@@ -1,6 +1,7 @@
 ﻿
 using EmplyeMgm.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,15 +48,8 @@ namespace EmplyeMgm.Services
                 } 
             }
 
-            return  new Employee
-            {
-                FirstName = "ajay",
-                LastName = "singh",
-                City = "pune",
-                DOB = new DateOnly(2001, 12, 10),
-                IsAdmin = false,
-                Emial = "ajay@gmail.com"
-            }; 
+            return null;
+             
         }
 
         public async Task<Employee> GetEmployeeByIdAsync(int id)
