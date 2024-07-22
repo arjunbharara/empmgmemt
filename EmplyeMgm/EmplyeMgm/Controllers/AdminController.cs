@@ -11,7 +11,7 @@ using EmplyeMgm.ViewModel;
 
 namespace EmplyeMgm.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin,SuperAdmin")]
     public class AdminController : Controller
     {
         private readonly IAdminService _adminService;
@@ -144,7 +144,8 @@ namespace EmplyeMgm.Controllers
                 try
                 {
                     await _adminService.UpdateEmployeeAsync(employee);
-
+                    TempData["EmployeeEdit"] = true;
+                    return View("Edit");
                 }
                 catch (DbUpdateConcurrencyException ex)
                 {
@@ -162,8 +163,11 @@ namespace EmplyeMgm.Controllers
                     _logger.LogError(ex, "An error occurred while updating employee.");
                     return RedirectToAction("Error", "Home");
                 }
+            }else
+            {
+                return View(employee);
             }
-            return View(employee);
+           
         }
 
         // GET: Employees/Delete/5
@@ -198,7 +202,8 @@ namespace EmplyeMgm.Controllers
             try
             {
                 await _adminService.DeleteEmployeeAsync(id);
-                return RedirectToAction(nameof(Index));
+                TempData["EmployeeDeleted"] = true;
+                return View("Delete");
             }
             catch (Exception ex)
             {

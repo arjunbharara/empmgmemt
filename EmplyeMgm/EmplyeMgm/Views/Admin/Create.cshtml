@@ -41,11 +41,13 @@
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
                 <input asp-for="Password" class="form-control" />
+                <input type="checkbox" onclick="togglePass()">Show Password
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ConfirmPassword" class="control-label"></label>
                 <input asp-for="ConfirmPassword" class="form-control" />
+                <input type="checkbox" onclick="togglePass()">Show Password
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
             @if(User.IsInRole("SuperAdmin"))
@@ -69,4 +71,17 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function togglePass() {
+            var passwordField = document.getElementById('Password');
+            var confirmPasswordField = document.getElementById('ConfirmPassword');
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+            }
+        }
+    </script>
 }

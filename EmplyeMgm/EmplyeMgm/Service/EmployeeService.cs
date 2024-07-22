@@ -25,68 +25,86 @@ namespace EmplyeMgm.Services
 
         public async Task<Employee> GetEmployeesAsync(ClaimsPrincipal user)
         {
-            var listOfEmployees = await _context.Employees.ToListAsync();
-            var emp= await _userManager.GetUserAsync(user);
-            if (emp != null)
+            try
             {
-                foreach(var item in listOfEmployees)
+                var listOfEmployees = await _context.Employees.ToListAsync();
+                var emp = await _userManager.GetUserAsync(user);
+                if (emp != null)
                 {
-                    if (item.Emial == emp.Email)
+                    foreach (var item in listOfEmployees)
                     {
-                        var employee = new Employee
+                        if (item.Emial == emp.Email)
                         {
-                            City = emp.City,
-                            FirstName = emp.FirstName,
-                            LastName = emp.LastName,
-                            DOB = emp.DOB,
-                            Emial = emp.Email,
-                            IsAdmin = emp.IsAdmin,
-                            Id=item.Id
-                        };
-                        return employee;
+                            var employee = new Employee
+                            {
+                                City = emp.City,
+                                FirstName = emp.FirstName,
+                                LastName = emp.LastName,
+                                DOB = emp.DOB,
+                                Emial = emp.Email,
+                                IsAdmin = emp.IsAdmin,
+                                Id = item.Id
+                            };
+                            return employee;
+                        }
                     }
-                } 
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while retrieving employees.", ex);
             }
 
-            return null;
-             
+            return null; 
         }
 
         public async Task<Employee> GetEmployeeByIdAsync(int id)
         {
-            return await _context.Employees.FindAsync(id);
+            try
+            {
+                return await _context.Employees.FindAsync(id);
+            } catch (Exception ex) {
+                {
+
+                    throw new ApplicationException($"An error occurred while retrieving the employee with ID {id}.", ex);
+                }
+            }
         }
 
         public async Task CreateEmployeeAsync(Employee employee, string pass)
         {
+            try { 
             _context.Add(employee);
             await _context.SaveChangesAsync();
             var user = new ApplicationUser { FirstName = employee.FirstName,City=employee.City,DOB=employee.DOB, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial, IsAdmin = employee.IsAdmin };
-            var result = await _userManager.CreateAsync(user, pass);
+                var result = await _userManager.CreateAsync(user, pass);
+                    if (result.Succeeded)
+                    {
+                        var role = employee.IsAdmin ? "Admin" : "Employee";
+                        await _userManager.AddToRoleAsync(user, role);
+                    }
+                    else
+                    {
+                        throw new ApplicationException("Failed to create user account.");
+                    }
 
-            if (result.Succeeded)
+                }
+            catch (Exception ex)
             {
-                if (employee.IsAdmin)
-                {
-                    await _userManager.AddToRoleAsync(user, "Admin");
-                }
-                else
-                {
-                    await _userManager.AddToRoleAsync(user, "Employee");
-                }
+                throw new ApplicationException("An error occurred while creating the employee.", ex);
             }
-            
         }
 
         public async Task UpdateEmployeeAsync(Employee employee)
         {
+            try { 
             _context.Update(employee);
            
             await _context.SaveChangesAsync();
             var user = await _userManager.FindByEmailAsync(employee.Emial);
             if (user == null)
             {
-                return;
+                throw new KeyNotFoundException("User not found.");
             }
             else
             {
@@ -99,28 +117,23 @@ namespace EmplyeMgm.Services
                 user.NormalizedUserName = employee.Emial;
                 await _userManager.UpdateAsync(user);
             }
-        }
-
-        public async Task DeleteEmployeeAsync(int id)
-        {
-            var employee = await _context.Employees.FindAsync(id);
-            var user = await _userManager.FindByEmailAsync(employee.Emial);
-            if (employee != null)
+            }
+            catch (Exception ex)
             {
-               
-                _context.Employees.Remove(employee);
-                await _context.SaveChangesAsync();
-                if(user != null)
-                {
-                    await _userManager.DeleteAsync(user);
-                }
-
+                throw new ApplicationException("An error occurred while updating the employee.", ex);
             }
         }
 
         public bool EmployeeExists(int id)
         {
-            return _context.Employees.Any(e => e.Id == id);
+            try
+            {
+                return _context.Employees.Any(e => e.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occured while checking if the employee exists", ex);
+            }
         }
     }
 }

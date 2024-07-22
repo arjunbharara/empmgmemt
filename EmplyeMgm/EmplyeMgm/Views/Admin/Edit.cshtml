@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Edit";
+    bool employeeEdited = TempData["EmployeeEdit"] != null && (bool)TempData["EmployeeEdit"];
 }
 
 <h1>Edit</h1>
@@ -56,4 +57,31 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <!-- Include Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Include Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    @if (employeeEdited)
+    {
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                if (@employeeEdited.ToString().ToLower()) {
+                    Toastify({
+                        text: "Employee Edited successfully",
+                        duration: 3000, // Duration in milliseconds
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
+                    }).showToast();
+
+                    setTimeout(function () {
+                        window.location.href = '@Url.Action("Index", "Admin")';
+                    }, 3000);
+                }
+            });
+        </script>
+    }
 }

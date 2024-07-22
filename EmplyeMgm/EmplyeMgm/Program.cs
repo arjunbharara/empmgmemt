@@ -10,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeDb")));
 
@@ -19,16 +18,15 @@ builder.Services.AddDefaultIdentity<ApplicationUser>()
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddScoped<IEmployeeService,EmployeeService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 
 var app = builder.Build();
 
-// Seed roles
+// Seed roles and super admin
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-
     try
     {
         await ApplicationDbContext.SeedRolesAndSuperAdmin(services);
@@ -40,26 +38,24 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-//adding middleware for handling the unhandled exceptions.
-app.UseMiddleware<CustsomExceptionMiddleware>();
 
-app.UseStatusCodePagesWithReExecute("/Base/Error", "?statusCode={0}");
+//app.UseMiddleware<CustsomExceptionMiddleware>();
+app.UseStatusCodePagesWithReExecute("/Home/Error/{0}");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapRazorPages();
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

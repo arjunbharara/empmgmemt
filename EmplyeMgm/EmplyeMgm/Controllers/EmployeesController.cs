@@ -10,15 +10,15 @@ namespace EmplyeMgm.Controllers
 {
 
     [Authorize(Roles ="Employee")]
-    public class EmployeesController : HomeController
+    public class EmployeesController : Controller
     {
         private readonly IEmployeeService _employeeService;
-       
-        
-        public EmployeesController(IEmployeeService employeeService, ILogger<HomeController> logger):base(logger)
+        private readonly ILogger<AdminController> _logger;
+
+        public EmployeesController(IEmployeeService employeeService, ILogger<AdminController> logger)
         {
             _employeeService = employeeService;
-
+            _logger = logger;
         }
 
         // GET: Employees
@@ -32,12 +32,12 @@ namespace EmplyeMgm.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while getting employees");
-                return RedirectToAction("Error", new { statusCode = "500" });
+                _logger.LogError(ex, "An error occured while getting employee");
+                return RedirectToAction("Error", "Home");
             }
         }
 
-        [Authorize(Roles = "Admin,SuperAdmin,Employee")]
+       
         // GET: Employees/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,14 +45,21 @@ namespace EmplyeMgm.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
+            try
             {
-                return NotFound();
-            }
+                var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
 
-            return View(employee);
+                return View(employee);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occured while getting employee details.");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
 
@@ -63,13 +70,20 @@ namespace EmplyeMgm.Controllers
             {
                 return NotFound();
             }
-
-            var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
+            try
             {
-                return NotFound();
+                var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return View(employee);
             }
-            return View(employee);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while getting employee for edit.");
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         // POST: Employees/Edit/5
@@ -89,7 +103,7 @@ namespace EmplyeMgm.Controllers
                     await _employeeService.UpdateEmployeeAsync(employee);
                    
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateConcurrencyException ex)
                 {
                     if (!_employeeService.EmployeeExists(employee.Id))
                     {
@@ -97,37 +111,17 @@ namespace EmplyeMgm.Controllers
                     }
                     else
                     {
-                        throw;
+                        _logger.LogError(ex, "A concurrency error occurred while updating employee.");
+                        return RedirectToAction("Error", "Home");
                     }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "An error occurred while updating employee.");
+                    return RedirectToAction("Error", "Home");
                 }
             }
             return RedirectToAction("Index");
-        }
-
-        // GET: Employees/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-
-            return View(employee);
-        }
-
-        // POST: Employees/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            await _employeeService.DeleteEmployeeAsync(id);
-            return RedirectToAction(nameof(Index));
         }
     }
 }

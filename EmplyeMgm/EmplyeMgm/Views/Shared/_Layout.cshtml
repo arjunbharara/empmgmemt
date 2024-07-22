@@ -34,10 +34,7 @@
                             if (User.IsInRole("Employee"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Employees" asp-action="Details" asp-route-id="@Model.Id">Details</a>
-                                </li>
-                                <li>
-                                    <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Profile </a>
+                                    <a class="nav-link" asp-area="" asp-controller="Employees" asp-action="Index">Employees</a>
                                 </li>
                             }
                         }

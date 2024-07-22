@@ -25,14 +25,14 @@ namespace EmplyeMgm.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error( )
+        public IActionResult Error(string? statusCode)
         {
-            var context=HttpContext.Features.Get<IExceptionHandlerFeature>();
+     
             var errorViewModel = new ErrorViewModel
             {
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
-                ErrorMessage = context?.Error.Message ?? "An error occured.",
-                StatusCode = HttpContext.Response.StatusCode
+                ErrorMessage = HttpContext.Response.StatusCode == 404 ? "Page not found." : "An error occurred.",
+                StatusCode = HttpContext.Response.StatusCode,
             };
              return View(errorViewModel);
         }

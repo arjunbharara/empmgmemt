@@ -22,10 +22,10 @@ namespace EmplyeMgm.Middlewares
             try
             {
                 await _next(httpContext);
-                if (httpContext.Response.StatusCode == (int)HttpStatusCode.NotFound)
+               /* if (httpContext.Response.StatusCode == (int)HttpStatusCode.NotFound)
                 {
                     await HandleStatusCodeAsync(httpContext, HttpStatusCode.NotFound);
-                }
+                }*/
             }
             catch (Exception ex)
             {
@@ -58,7 +58,7 @@ namespace EmplyeMgm.Middlewares
            // return context.Response.WriteAsJsonAsync(result);
         }
 
-        private Task HandleStatusCodeAsync(HttpContext context, HttpStatusCode statusCode)
+       /* private Task HandleStatusCodeAsync(HttpContext context, HttpStatusCode statusCode)
         {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)statusCode;
@@ -79,6 +79,6 @@ namespace EmplyeMgm.Middlewares
                 return Task.CompletedTask;
             }
            // return context.Response.WriteAsJsonAsync(errorViewModel);
-        }
+        }*/
     }
 }
