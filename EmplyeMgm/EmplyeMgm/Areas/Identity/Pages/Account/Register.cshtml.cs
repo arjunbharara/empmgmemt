@@ -82,11 +82,12 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             /// [Required]
-           
+
+            [Required]
             [Display(Name = "FirstName")]
             public string FirstName { get; set; }
 
-           
+            [Required]
             [Display(Name = "LastName")]
             public string LastName { get; set; }
 
@@ -144,39 +145,48 @@ namespace EmplyeMgm.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
-
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                user.FirstName = Input.FirstName;
-                user.LastName = Input.LastName;
-                user.City= Input.City;
-                user.DOB = Input.DOB;
-                user.IsAdmin = Input.IsAdmin;
-                var result = await _userManager.CreateAsync(user, Input.Password);
-
-                if (result.Succeeded)
+                try
                 {
-                    _logger.LogInformation("User created a new account with password.");
-                    await _userManager.AddToRoleAsync(user, "Employee");
-                    var employee = new Employee
+                    var user = CreateUser();
+
+                    await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                    await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                    user.FirstName = Input.FirstName;
+                    user.LastName = Input.LastName;
+                    user.City = Input.City;
+                    user.DOB = Input.DOB;
+                    user.IsAdmin = Input.IsAdmin;
+                    var result = await _userManager.CreateAsync(user, Input.Password);
+
+                    if (result.Succeeded)
                     {
-                        FirstName = Input.FirstName,
-                        LastName = Input.LastName,
-                        IsAdmin = Input.IsAdmin,
-                        Emial = Input.Email,
-                        City = Input.City,
-                        DOB = Input.DOB,
-                    };
-                    _context.Add(employee);
-                    await _context.SaveChangesAsync();
-
-                    return Redirect("~/Identity/Account/Login");
+                        _logger.LogInformation("User created a new account with password.");
+                        await _userManager.AddToRoleAsync(user, "Employee");
+                        var employee = new Employee
+                        {
+                            FirstName = Input.FirstName,
+                            LastName = Input.LastName,
+                            IsAdmin = Input.IsAdmin,
+                            Emial = Input.Email,
+                            City = Input.City,
+                            DOB = Input.DOB,
+                        };
+                        _context.Add(employee);
+                        await _context.SaveChangesAsync();
+                        TempData["RegisteredSuccess"] = true;
+                        return Redirect("~/Identity/Account/Login");
+                    }
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
                 }
-                foreach (var error in result.Errors)
+                catch (Exception ex)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    _logger.LogError(ex, "An error occured while registering employee");
+                    return RedirectToAction("Error", "Home");
                 }
+                
             }
 
             // If we got this far, something failed, redisplay form

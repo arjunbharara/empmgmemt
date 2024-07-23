@@ -1,5 +1,6 @@
 ﻿
 using EmplyeMgm.Models;
+using EmplyeMgm.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
@@ -134,6 +135,13 @@ namespace EmplyeMgm.Services
             {
                 throw new ApplicationException("An error occured while checking if the employee exists", ex);
             }
+        }
+
+        public async Task<IdentityResult> ChangePass(ChangePassViewModel model,ApplicationUser user)
+        {
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            return result;
+          
         }
     }
 }

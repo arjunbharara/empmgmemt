@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>@Html.DisplayFor(modelItem => Model.FirstName) Details</h1>
 
 
 <table class="table">
@@ -30,7 +30,6 @@
         </tr>
     </thead>
     <tbody>
-@* @foreach (var item in Model) { *@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => Model.FirstName)
@@ -48,11 +47,11 @@
                 @Html.DisplayFor(modelItem => Model.City)
             </td>
             <td>@Html.DisplayFor(modelItem => Model.IsAdmin)</td>
-             <td>
+            <td>
                 <a asp-asp-controller="Employees" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-              
-                </td>
+                <a asp-asp-controller="Employees" asp-action="ChangePassword" >Change Password</a>
+
+            </td>
         </tr>
-@* } *@
     </tbody>
 </table>

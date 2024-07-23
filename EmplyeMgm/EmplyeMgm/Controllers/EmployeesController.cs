@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using EmplyeMgm.ViewModel;
 
 namespace EmplyeMgm.Controllers
 {
@@ -14,11 +15,14 @@ namespace EmplyeMgm.Controllers
     {
         private readonly IEmployeeService _employeeService;
         private readonly ILogger<AdminController> _logger;
-
-        public EmployeesController(IEmployeeService employeeService, ILogger<AdminController> logger)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public EmployeesController(IEmployeeService employeeService, ILogger<AdminController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _employeeService = employeeService;
             _logger = logger;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // GET: Employees
@@ -101,7 +105,8 @@ namespace EmplyeMgm.Controllers
                 try
                 {
                     await _employeeService.UpdateEmployeeAsync(employee);
-                   
+                    TempData["EmployeeEdit"] = true;
+                    return View("Edit");
                 }
                 catch (DbUpdateConcurrencyException ex)
                 {
@@ -123,5 +128,52 @@ namespace EmplyeMgm.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePassViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //fetch the User Details
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    //If User does not exists, redirect to the Login Page
+                    return RedirectToAction("Login", "Account");
+                }
+                var result=await _employeeService.ChangePass(model,user);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+                    return View();
+                }
+                // Upon successfully changing the password refresh sign-in cookie
+                await _signInManager.RefreshSignInAsync(user);
+
+                //Then redirect the user to the ChangePasswordConfirmation view
+                return RedirectToAction("ChangePasswordConfirmation", "Employees");
+            }
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult ChangePasswordConfirmation()
+        {
+            return View();
+        }
+
     }
 }

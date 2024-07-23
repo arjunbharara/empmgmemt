@@ -70,16 +70,16 @@
                 if (@employeeEdited.ToString().ToLower()) {
                     Toastify({
                         text: "Employee Edited successfully",
-                        duration: 3000, // Duration in milliseconds
+                        duration: 3000,
                         close: true,
-                        gravity: "top", // `top` or `bottom`
-                        position: "right", // `left`, `center` or `right`
+                        gravity: "top", 
+                        position: "center", 
                         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)"
                     }).showToast();
 
                     setTimeout(function () {
                         window.location.href = '@Url.Action("Index", "Admin")';
-                    }, 3000);
+                    }, 1000);
                 }
             });
         </script>
