@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using EmplyeMgm.Service;
 using EmplyeMgm.ViewModel;
+using EmplyeMgm.StoredProcedure;
 
 
 namespace EmplyeMgm.Controllers
@@ -16,11 +17,13 @@ namespace EmplyeMgm.Controllers
     {
         private readonly IAdminService _adminService;
         private readonly ILogger<AdminController> _logger;
+        private readonly IAdminSPService _adminSPService;
 
-        public AdminController(IAdminService adminService,ILogger<AdminController>logger)
+        public AdminController(IAdminService adminService,ILogger<AdminController>logger,IAdminSPService adminSPService)
         {
             _adminService=adminService;
             _logger=logger;
+            _adminSPService=adminSPService;
         }
 
         // GET: Employees
@@ -29,7 +32,8 @@ namespace EmplyeMgm.Controllers
         {
             try
             {
-                var employees = await _adminService.GetEmployeesAsync();
+                // var employees = await _adminService.GetEmployeesAsync();
+                var employees = _adminSPService.GetAlllEmployees();
                 return View(employees);
             }
             catch (Exception ex)
@@ -92,7 +96,8 @@ namespace EmplyeMgm.Controllers
                         City = employee.City,
                         IsAdmin = employee.IsAdmin
                     };
-                    await _adminService.CreateEmployeeAsync(emp, employee.Password);
+                   // await _adminService.CreateEmployeeAsync(emp, employee.Password);
+                    await _adminSPService.CreateEmployee(emp, employee.Password);
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception ex)
