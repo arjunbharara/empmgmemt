@@ -1,9 +1,14 @@
-﻿@model EmplyeMgm.Models.Employee
+﻿@model EmplyeMgm.Models.ApplicationUser
 
 @{
     ViewData["Title"] = "Edit";
     bool employeeEdited = TempData["EmployeeEdit"] != null && (bool)TempData["EmployeeEdit"];
 }
+<!-- Include Toastify CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<!-- Include Toastify JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <h1>Edit</h1>
 
@@ -25,9 +30,9 @@
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Emial" class="control-label"></label>
-                <input asp-for="Emial" class="form-control" />
-                <span asp-validation-for="Emial" class="text-danger"></span>
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DOB" class="control-label"></label>
@@ -57,12 +62,7 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <!-- Include Toastify CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <!-- Include Toastify JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+ 
     @if (employeeEdited)
     {
         <script type="text/javascript">
@@ -70,7 +70,7 @@
                 if (@employeeEdited.ToString().ToLower()) {
                     Toastify({
                         text: "Employee Edited successfully",
-                        duration: 3000,
+                        duration: 1000,
                         close: true,
                         gravity: "top", 
                         position: "center", 

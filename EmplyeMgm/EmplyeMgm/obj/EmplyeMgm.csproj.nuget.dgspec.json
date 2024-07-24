@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\arjun\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj": {}
+    "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj": {}
   },
   "projects": {
-    "D:\\arjun\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj": {
+    "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\arjun\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
+        "projectUniqueName": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
         "projectName": "EmplyeMgm",
-        "projectPath": "D:\\arjun\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
-        "packagesPath": "C:\\Users\\91745\\.nuget\\packages\\",
-        "outputPath": "D:\\arjun\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\obj\\",
+        "projectPath": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\EmplyeMgm.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\empmgmemt\\EmplyeMgm\\EmplyeMgm\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\91745\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -24,13 +24,14 @@ namespace EmplyeMgm.Services
             _roleManager = roleManager;
         }
 
-        public async Task<Employee> GetEmployeesAsync(ClaimsPrincipal user)
+        public async Task<ApplicationUser> GetEmployeesAsync(ClaimsPrincipal user)
         {
             try
             {
-                var listOfEmployees = await _context.Employees.ToListAsync();
-                var emp = await _userManager.GetUserAsync(user);
-                if (emp != null)
+               // var listOfEmployees = await _userManager.Users.ToListAsync();
+                //var listOfEmployees = await _context.Employees.ToListAsync();
+                return  await _userManager.GetUserAsync(user);
+              /*  if (emp != null)
                 {
                     foreach (var item in listOfEmployees)
                     {
@@ -48,8 +49,7 @@ namespace EmplyeMgm.Services
                             };
                             return employee;
                         }
-                    }
-                }
+                    }*/
             }
             catch (Exception ex)
             {
@@ -59,11 +59,11 @@ namespace EmplyeMgm.Services
             return null; 
         }
 
-        public async Task<Employee> GetEmployeeByIdAsync(int id)
+        public async Task<ApplicationUser> GetEmployeeByIdAsync(string id)
         {
             try
             {
-                return await _context.Employees.FindAsync(id);
+                return await _userManager.FindByIdAsync(id);
             } catch (Exception ex) {
                 {
 
@@ -72,7 +72,7 @@ namespace EmplyeMgm.Services
             }
         }
 
-        public async Task CreateEmployeeAsync(Employee employee, string pass)
+       /* public async Task CreateEmployeeAsync(Employee employee, string pass)
         {
             try { 
             _context.Add(employee);
@@ -94,15 +94,15 @@ namespace EmplyeMgm.Services
             {
                 throw new ApplicationException("An error occurred while creating the employee.", ex);
             }
-        }
+        }*/
 
-        public async Task UpdateEmployeeAsync(Employee employee)
+        public async Task UpdateEmployeeAsync(ApplicationUser employee)
         {
             try { 
-            _context.Update(employee);
+           /* _context.Update(employee);
            
-            await _context.SaveChangesAsync();
-            var user = await _userManager.FindByEmailAsync(employee.Emial);
+            await _context.SaveChangesAsync();*/
+            var user = await _userManager.FindByEmailAsync(employee.Email);
             if (user == null)
             {
                 throw new KeyNotFoundException("User not found.");
@@ -111,11 +111,13 @@ namespace EmplyeMgm.Services
             {
                 user.FirstName = employee.FirstName;
                 user.LastName = employee.LastName;
-                user.Email = employee.Emial;
+                user.Email = employee.Email;
                 user.IsAdmin = employee.IsAdmin;
-                user.UserName = employee.Emial;
-                user.NormalizedEmail = employee.Emial;
-                user.NormalizedUserName = employee.Emial;
+                user.City = employee.City;
+                user.DOB = employee.DOB;
+                user.UserName = employee.Email;
+                user.NormalizedEmail = employee.Email;
+                user.NormalizedUserName = employee.Email;
                 await _userManager.UpdateAsync(user);
             }
             }
@@ -125,11 +127,16 @@ namespace EmplyeMgm.Services
             }
         }
 
-        public bool EmployeeExists(int id)
+        public async Task<bool> EmployeeExists(string id)
         {
             try
             {
-                return _context.Employees.Any(e => e.Id == id);
+                var user= await _userManager.FindByIdAsync(id);
+                if (user == null)
+                {
+                    return false;
+                }
+                return true;
             }
             catch (Exception ex)
             {

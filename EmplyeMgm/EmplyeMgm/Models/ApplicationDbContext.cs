@@ -60,5 +60,7 @@ namespace EmplyeMgm.Models
 
         }
         public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<ApplicationUser> Emp { get; set; }
     }
 }

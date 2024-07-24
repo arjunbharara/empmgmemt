@@ -1,9 +1,14 @@
-﻿@model EmplyeMgm.Models.Employee
+﻿@model EmplyeMgm.Models.ApplicationUser
 
 @{
     ViewData["Title"] = "Delete";
     bool employeeDeleted = TempData["EmployeeDeleted"] != null && (bool)TempData["EmployeeDeleted"];
 }
+<!-- Include Toastify CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<!-- Include Toastify JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <h1>Delete</h1>
 
@@ -25,10 +30,10 @@
             @Html.DisplayFor(model => model.LastName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Emial)
+            @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Emial)
+            @Html.DisplayFor(model => model.Email)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.DOB)
@@ -57,11 +62,7 @@
     </form>
 </div>
 
-<!-- Include Toastify CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-<!-- Include Toastify JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 @if(employeeDeleted)
 {
 <script type="text/javascript">
@@ -69,7 +70,7 @@
         if (@employeeDeleted.ToString().ToLower()) {
             Toastify({
                 text: "Employee deleted successfully",
-                duration: 3000,
+                duration: 1000,
                 close: true,
                 gravity: "top", 
                 position: "center", 
@@ -78,7 +79,7 @@
 
             setTimeout(function () {
                 window.location.href = '@Url.Action("Index", "Admin")';
-            }, 3000);
+            }, 1000);
         }
     });
 </script>

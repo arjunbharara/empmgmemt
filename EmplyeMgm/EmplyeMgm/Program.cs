@@ -21,7 +21,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>()
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddScoped<IAdminSPService, AdminSPService>(); 
+builder.Services.AddScoped<IAdminSPService, AdminSPService>();
+builder.Services.AddScoped<IEmployeeSPService, EmployeeSPService>();
 
 var app = builder.Build();
 

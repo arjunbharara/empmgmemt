@@ -1,5 +1,6 @@
 ﻿
 using EmplyeMgm.Models;
+using EmplyeMgm.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -22,11 +23,11 @@ namespace EmplyeMgm.Service
                 _roleManager = roleManager;
             }
 
-            public async Task<IEnumerable<Employee>> GetEmployeesAsync()
+            public async Task<IEnumerable<ApplicationUser>> GetEmployeesAsync()
             {
             try
             {
-                return await _context.Employees.ToListAsync();
+                return await _userManager.Users.ToListAsync();
             }
             catch (Exception ex)
             {
@@ -34,11 +35,12 @@ namespace EmplyeMgm.Service
             }
             }
 
-            public async Task<Employee> GetEmployeeByIdAsync(int id)
+
+            public async Task<ApplicationUser> GetEmployeeByIdAsync(string id)
             {
             try
             {
-                return await _context.Employees.FindAsync(id);
+                return await _context.Emp.FindAsync(id);
             }
             catch (Exception ex)
             {
@@ -48,19 +50,18 @@ namespace EmplyeMgm.Service
 
             }
 
-        public async Task CreateEmployeeAsync(Employee employee, string pass)
+
+        public async Task CreateEmployeeAsync(ApplicationUser employee, string pass)
         {
             try
             {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
-                var user = new ApplicationUser { FirstName = employee.FirstName, City = employee.City, DOB = employee.DOB, LastName = employee.LastName, UserName = employee.Emial, Email = employee.Emial, IsAdmin = false };
-                var result = await _userManager.CreateAsync(user, pass);
+             
+                var result = await _userManager.CreateAsync(employee, pass);
 
                 if (result.Succeeded)
                 {
                     var role = employee.IsAdmin ? "Admin" : "Employee";
-                    await _userManager.AddToRoleAsync(user, role);
+                    await _userManager.AddToRoleAsync(employee, role);
                 }
                 else
                 {
@@ -74,14 +75,14 @@ namespace EmplyeMgm.Service
             }
         }
 
-            public async Task UpdateEmployeeAsync(Employee employee)
+            public async Task UpdateEmployeeAsync(ApplicationUser employee)
             {
             try
             {
-                _context.Update(employee);
+               //_context.Update(employee);
 
-                await _context.SaveChangesAsync();
-                var user = await _userManager.FindByEmailAsync(employee.Emial);
+               //await _context.SaveChangesAsync();
+                var user = await _userManager.FindByEmailAsync(employee.Email);
                 if (user == null)
                 {
                     throw new KeyNotFoundException("User not found.");
@@ -90,11 +91,13 @@ namespace EmplyeMgm.Service
                 {
                     user.FirstName = employee.FirstName;
                     user.LastName = employee.LastName;
-                    user.Email = employee.Emial;
+                    user.Email = employee.Email;
+                    user.City=employee.City;
                     user.IsAdmin = employee.IsAdmin;
-                    user.UserName = employee.Emial;
-                    user.NormalizedEmail = employee.Emial;
-                    user.NormalizedUserName = employee.Emial;
+                    user.UserName = employee.Email;
+                    user.NormalizedEmail = employee.Email;
+                    user.NormalizedUserName = employee.Email;
+                    user.DOB = employee.DOB;
                     await _userManager.UpdateAsync(user);
                 }
             }
@@ -104,21 +107,19 @@ namespace EmplyeMgm.Service
             }
             }
 
-            public async Task DeleteEmployeeAsync(int id)
+            public async Task DeleteEmployeeAsync(string id)
             {
             try
             {
-                var employee = await _context.Employees.FindAsync(id);
+                //var employee = await _context.Emp.FindAsync(id);
+                var employee = await _userManager.FindByIdAsync(id);
                 if (employee == null)
                 {
                     throw new KeyNotFoundException("Employee Not Found");
                 }
-                var user = await _userManager.FindByEmailAsync(employee.Emial);
-                _context.Employees.Remove(employee);
-                await _context.SaveChangesAsync();
-                if (user != null)
+                if (employee != null)
                 {
-                    await _userManager.DeleteAsync(user);
+                    await _userManager.DeleteAsync(employee);
                 }
 
             }
@@ -128,16 +129,29 @@ namespace EmplyeMgm.Service
             }
             }
 
-            public bool EmployeeExists(int id)
+            public async Task<bool> EmployeeExists(string id)
             {
             try
             {
-                return _context.Employees.Any(e => e.Id == id);
+                //  return _context.Employees.Any(e => e.Id == id);
+                var emp= await _userManager.FindByIdAsync(id);
+                if(emp!= null)
+                {
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
                 throw new ApplicationException("An error occured while checking if the employee exists",ex);   
             }
             }
+
+        public async Task<IdentityResult> ChangePass(ChangePassViewModel model, ApplicationUser user)
+        {
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            return result;
+
+        }
     }
 }

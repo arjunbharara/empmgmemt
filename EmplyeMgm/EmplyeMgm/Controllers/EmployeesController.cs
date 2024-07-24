@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using EmplyeMgm.ViewModel;
+using EmplyeMgm.StoredProcedure;
 
 namespace EmplyeMgm.Controllers
 {
@@ -17,12 +18,15 @@ namespace EmplyeMgm.Controllers
         private readonly ILogger<AdminController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        public EmployeesController(IEmployeeService employeeService, ILogger<AdminController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        private readonly IEmployeeSPService _employeeSPService;
+        public EmployeesController(IEmployeeService employeeService, ILogger<AdminController> logger, UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,IEmployeeSPService employeeSPService)
         {
             _employeeService = employeeService;
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
+            _employeeSPService = employeeSPService;
         }
 
         // GET: Employees
@@ -43,7 +47,7 @@ namespace EmplyeMgm.Controllers
 
        
         // GET: Employees/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -51,7 +55,7 @@ namespace EmplyeMgm.Controllers
             }
             try
             {
-                var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
+                var employee = await _employeeService.GetEmployeeByIdAsync(id);
                 if (employee == null)
                 {
                     return NotFound();
@@ -68,7 +72,7 @@ namespace EmplyeMgm.Controllers
 
 
         // GET: Employees/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -76,7 +80,8 @@ namespace EmplyeMgm.Controllers
             }
             try
             {
-                var employee = await _employeeService.GetEmployeeByIdAsync(id.Value);
+                var employee = await _employeeService.GetEmployeeByIdAsync(id);
+                //var employee = await _employeeSPService.GetEmployeeById(id);
                 if (employee == null)
                 {
                     return NotFound();
@@ -90,10 +95,10 @@ namespace EmplyeMgm.Controllers
             }
         }
 
-        // POST: Employees/Edit/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Emial,DOB,City,IsAdmin")] Employee employee)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,FirstName,LastName,Email,DOB,City,IsAdmin")] ApplicationUser employee)
         {
             if (id != employee.Id)
             {
@@ -105,12 +110,13 @@ namespace EmplyeMgm.Controllers
                 try
                 {
                     await _employeeService.UpdateEmployeeAsync(employee);
+                    //await _employeeSPService.UpdateEmployee(employee);
                     TempData["EmployeeEdit"] = true;
                     return View("Edit");
                 }
                 catch (DbUpdateConcurrencyException ex)
                 {
-                    if (!_employeeService.EmployeeExists(employee.Id))
+                    if (!await _employeeService.EmployeeExists(employee.Id))
                     {
                         return NotFound();
                     }
@@ -142,7 +148,6 @@ namespace EmplyeMgm.Controllers
         {
             if (ModelState.IsValid)
             {
-                //fetch the User Details
                 var user = await _userManager.GetUserAsync(User);
                 if (user == null)
                 {
@@ -158,10 +163,9 @@ namespace EmplyeMgm.Controllers
                     }
                     return View();
                 }
-                // Upon successfully changing the password refresh sign-in cookie
+                // changing the password refresh sign-in cookie
                 await _signInManager.RefreshSignInAsync(user);
 
-                //Then redirect the user to the ChangePasswordConfirmation view
                 return RedirectToAction("ChangePasswordConfirmation", "Employees");
             }
 

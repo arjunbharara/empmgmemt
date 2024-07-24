@@ -10,11 +10,10 @@ namespace EmplyeMgm.Services
 {
     public interface IEmployeeService
     {
-        Task<Employee>GetEmployeesAsync(ClaimsPrincipal user);
-        Task<Employee> GetEmployeeByIdAsync(int id);
-        Task CreateEmployeeAsync(Employee employee,string pass);
-        Task UpdateEmployeeAsync(Employee employee);
-        bool EmployeeExists(int id);
+        Task<ApplicationUser>GetEmployeesAsync(ClaimsPrincipal user);
+        Task<ApplicationUser> GetEmployeeByIdAsync(string id);
+        Task UpdateEmployeeAsync(ApplicationUser employee);
+        Task<bool> EmployeeExists(string id);
         Task<IdentityResult> ChangePass(ChangePassViewModel model,ApplicationUser user);
     }
 }
