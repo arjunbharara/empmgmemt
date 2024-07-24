@@ -5,8 +5,10 @@ namespace EmplyeMgm.StoredProcedure
 {
     public interface IAdminSPService
     {
-        IEnumerable<Employee> GetAlllEmployees( );
+        Task<IEnumerable<Employee>> GetAlllEmployees( );
         Task CreateEmployee(Employee employee, string pass);
         Task UpdateEmployee(Employee employee);
+        Task DeleteEmployee(int Id);
+        Task<Employee> GetEmployeeById(int Id);
     }
 }

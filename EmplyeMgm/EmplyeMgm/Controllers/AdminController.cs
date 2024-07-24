@@ -32,8 +32,8 @@ namespace EmplyeMgm.Controllers
         {
             try
             {
-                // var employees = await _adminService.GetEmployeesAsync();
-                var employees = _adminSPService.GetAlllEmployees();
+                 //var employees = await _adminService.GetEmployeesAsync();
+                var employees = await _adminSPService.GetAlllEmployees();
                 return View(employees);
             }
             catch (Exception ex)
@@ -148,7 +148,8 @@ namespace EmplyeMgm.Controllers
             {
                 try
                 {
-                    await _adminService.UpdateEmployeeAsync(employee);
+                   // await _adminService.UpdateEmployeeAsync(employee);
+                    await _adminSPService.UpdateEmployee(employee);
                     TempData["EmployeeEdit"] = true;
                     return View("Edit");
                 }
@@ -206,7 +207,8 @@ namespace EmplyeMgm.Controllers
         {
             try
             {
-                await _adminService.DeleteEmployeeAsync(id);
+                // await _adminService.DeleteEmployeeAsync(id);
+                await _adminSPService.DeleteEmployee(id);
                 TempData["EmployeeDeleted"] = true;
                 return View("Delete");
             }
